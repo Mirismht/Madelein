@@ -920,8 +920,6 @@ footer .copyright {
   margin-top: 64px;
 }
 .cartcontent {
-  overflow-x: scroll;
-
   height: 60%;
 }
 
@@ -929,7 +927,6 @@ footer .copyright {
 .cart-items {
   max-height: calc(100vh - 247px);
   overflow-y: scroll;
-  overflow-x: scroll;
 }
 /* cart item */
 .cart-item {
