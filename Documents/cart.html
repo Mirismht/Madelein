@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Madeleine webstore</title>
+    <link rel="stylesheet" href="/style.css" />
+
+    <script src="/script.js" defer></script>
+
+    <!-- Script for the font awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- NAVIGATION BAR -->
+    <section id="header">
+      <a href="#">
+        <img src="/img/Main Logo.png" class="logo" alt="logo of the page" />
+      </a>
+
+      <div>
+        <ul id="navbar">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/Documents/shop.html">Shop</a></li>
+          <li><a href="/Documents/blog.html">Blog</a></li>
+          <li><a href="/Documents/aboutus.html">About</a></li>
+          <li><a href="/Documents/contactus.html">Contact</a></li>
+          <li id="lg-bag">
+            <a class="active" href="/Documents/cart.html"
+              ><i class="fa fa-solid fa-bag-shopping"></i
+            ></a>
+          </li>
+          <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+        </ul>
+      </div>
+      <div id="mobile">
+        <a href="/Documents/cart.html"
+          ><i class="fa-solid fa-bag-shopping"></i
+        ></a>
+        <i id="bar" class="fas fa-outdent"></i>
+      </div>
+    </section>
+
+    <!-- HERO SECTION -->
+    <section id="page-header" class="about-header">
+      <h2>#Cart</h2>
+
+      <p>Leave a message, We love to hear from you!</p>
+    </section>
+
+    <!-- CART -->
+
+    <div class="cart">
+      <div class="cartcontent">
+        <div class="cart-header">
+          <div class="column1">Item</div>
+          <div class="column2">Unit price</div>
+          <div class="column3">Units</div>
+        </div>
+        <div class="cart-items">
+          <!-- render cart items here -->
+        </div>
+      </div>
+      <div class="cart-footer">
+        <div class="subtotal">Subtotal (0 items): $0</div>
+        <div class="checkout">
+          <a href="javascript:void(0)" id="open-modal">Proceed to checkout</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHECKOUT -->
+    <div id="backdrop"></div>
+
+    <div id="checkout-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Checkout</h2>
+
+        <div class="cart-details">
+          <!-- Display cart items and total here -->
+        </div>
+
+        <h3>Shipping Information</h3>
+        <form id="shipping-form">
+          <input type="text" id="name" required placeholder="Name" />
+
+          <input
+            type="text"
+            id="address"
+            required
+            placeholder="Shipping address"
+          />
+
+          <input type="tel" id="phone" placeholder="Phone Number" required />
+
+          <h3>Payment Method</h3>
+
+          <select id="payment" required>
+            <option value="credit-card">Credit Card</option>
+            <option value="debit-card">Debit Card</option>
+            <option value="paypal">PayPal</option>
+          </select>
+
+          <div id="credit-card-fields" class="hidden">
+            <input
+              type="text"
+              id="card-number"
+              placeholder="Card Number"
+              required
+            />
+
+            <input
+              type="text"
+              id="card-code"
+              placeholder="Code (CVV)"
+              required
+            />
+
+            <input
+              type="text"
+              id="expiration-date"
+              required
+              placeholder="Expirig Date MM/YYYY"
+            />
+          </div>
+
+          <!-- Additional fields for credit card details, etc. can be added here -->
+
+          <button type="submit">Complete Purchase</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Thank You Message -->
+    <div id="thank-you-message" class="thank-you-message hidden">
+      Thank you, <span id="user-name-placeholder"></span>! Your purchase is
+      complete. You will be notify by a phone call!
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="section-p1">
+      <div class="col">
+        <!-- <img class="logo" src="/img/Main Logo.png" alt="logo" /> -->
+        <h4>Contact</h4>
+        <p>
+          <strong>Address:</strong> 562 Wellington Road, Street 32, San
+          Francisco
+        </p>
+        <p><strong>Phone:</strong> +01 2222 365</p>
+        <p><strong>Hours:</strong> 10:00-18:00 .Mon-Sat</p>
+        <div class="follow">
+          <h4>Follow us</h4>
+          <div class="icon">
+            <i><i class="fab fa-facebook-f"></i></i>
+            <i><i class="fab fa-instagram"></i></i>
+            <i><i class="fab fa-pinterest-p"></i></i>
+            <i><i class="fab fa-youtube"></i></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <h4>About</h4>
+        <a href="#">About us</a>
+        <a href="#">Delivery Informations</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact us</a>
+      </div>
+
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+      </div>
+
+      <div class="col install">
+        <h4>Install App</h4>
+        <p>From App Store or Google Play</p>
+        <div class="row">
+          <img src="/img/pay/app.jpg" alt="" />
+          <img src="/img/pay/play.jpg" alt="" />
+        </div>
+        <p>Secure Payment Gateways</p>
+        <img src="/img/pay/pay.png" alt="" />
+      </div>
+
+      <div class="copyright">
+        <p>&copy; <span class="year"></span> Madeleine</p>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Function to render cart items from local storage
+        function renderCartItemsFromLocalStorage() {
+          const cartData = JSON.parse(localStorage.getItem("cart")) || [];
+          cart = cartData.map((item) => ({
+            ...item,
+            numberOfUnits: Math.max(1, item.numberOfUnits),
+          }));
+          renderCartItems(cart);
+        }
+
+        renderCartItemsFromLocalStorage();
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const backdrop = document.getElementById("backdrop");
+        const modal = document.querySelector(".modal");
+        const openModalBtn = document.getElementById("open-modal");
+        const closeModalBtn = document.querySelector(".close-button");
+        const paymentSelect = document.getElementById("payment");
+        const creditCardFields = document.getElementById("credit-card-fields");
+
+        const shippingForm = document.getElementById("shipping-form");
+        const cartDetails = document.querySelector(".cart-details");
+        const checkoutBtn = document.querySelector(".checkout");
+
+        let purchases = [];
+
+        function showBackdrop() {
+          backdrop.classList.toggle("visible");
+        }
+
+        function removeBackdrop() {
+          backdrop.classList.remove("visible");
+        }
+
+        function showModal() {
+          modal.classList.toggle("visible");
+        }
+
+        function closeModal() {
+          modal.classList.remove("visible");
+        }
+
+        closeModalBtn.addEventListener("click", () => {
+          closeModal();
+          removeBackdrop();
+        });
+
+        openModalBtn.addEventListener("click", () => {
+          const subtotalValue = parseFloat(
+            subtotalEl.textContent.match(/[\d\.]+/)[0]
+          );
+          if (subtotalValue >= 1) {
+            showModal();
+            showBackdrop();
+          }
+        });
+
+        paymentSelect.addEventListener("change", function () {
+          if (
+            paymentSelect.value === "credit-card" ||
+            paymentSelect.value === "debit-card"
+          ) {
+            creditCardFields.classList.remove("hidden");
+          } else if (paymentSelect.value === "paypal") {
+            alert("PayPal method is not available for the moment");
+          } else {
+            creditCardFields.classList.add("hidden");
+          }
+        });
+
+        shippingForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          // Get user input from form fields
+          const name = document.getElementById("name").value;
+          const address = document.getElementById("address").value;
+          const phone = document.getElementById("phone").value;
+          const paymentMethod = paymentSelect.value;
+          const cardNumber = document.getElementById("card-number").value;
+          const cardCode = document.getElementById("card-code").value;
+          const expirationDate =
+            document.getElementById("expiration-date").value;
+
+          // Clear the cart items
+          cart = [];
+          updateCart();
+
+          // Clear user-input information
+          document.getElementById("name").value = "";
+          document.getElementById("address").value = "";
+          document.getElementById("phone").value = "";
+          paymentSelect.value = "credit-card"; // Reset payment method
+          document.getElementById("card-number").value = "";
+          document.getElementById("card-code").value = "";
+          document.getElementById("expiration-date").value = "";
+
+          // Create a purchase object
+          const purchase = {
+            name,
+            address,
+            phone,
+            paymentMethod,
+            cardNumber,
+            cardCode,
+            expirationDate,
+            cart: [...cart], // Include a copy of the cart array
+          };
+
+          const thankYouMessage = document.getElementById("thank-you-message");
+          const userNamePlaceholder = document.getElementById(
+            "user-name-placeholder"
+          );
+          userNamePlaceholder.textContent = name;
+          thankYouMessage.classList.add("visible");
+
+          // Push the purchase object to the purchases array
+          purchases.push(purchase);
+
+          // Save the purchases array to local storage
+          localStorage.setItem("purchases", JSON.stringify(purchases));
+
+          // Clear the cart from local storage
+          localStorage.removeItem("cart");
+
+          // Close the modal
+          modal.classList.remove("visible");
+          backdrop.classList.remove("visible");
+        });
+
+        // VALIDATION CARD
+        const cardNumberInput = document.getElementById("card-number");
+        const cardCodeInput = document.getElementById("card-code");
+        const expirationDateInput = document.getElementById("expiration-date");
+
+        cardNumberInput.addEventListener("input", function () {
+          this.value = this.value.replace(/[^0-9]/g, "");
+          if (this.value.length > 16) {
+            this.value = this.value.slice(0, 16);
+          }
+        });
+
+        cardCodeInput.addEventListener("input", function () {
+          this.value = this.value.replace(/[^0-9]/g, "");
+          if (this.value.length > 4) {
+            this.value = this.value.slice(0, 4);
+          }
+        });
+
+        expirationDateInput.addEventListener("input", function () {
+          this.value = this.value.replace(/[^0-9/]/g, "");
+          if (this.value.length > 7) {
+            this.value = this.value.slice(0, 7);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

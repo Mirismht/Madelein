@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Madeleine webstore</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="script.js" defer></script>
+
+    <!-- Script for the font awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- NAVIGATION BAR -->
+    <section id="header">
+      <a href="#">
+        <img src="./img/Main Logo.png" class="logo" alt="logo of the page" />
+      </a>
+
+      <div>
+        <ul id="navbar">
+          <li><a class="active" href="/index.html">Home</a></li>
+          <li><a href="/Documents/shop.html">Shop</a></li>
+          <li><a href="/Documents/blog.html">Blog</a></li>
+          <li><a href="/Documents/aboutus.html">About</a></li>
+          <li><a href="/Documents/contactus.html">Contact</a></li>
+          <li id="lg-bag">
+            <a href="/Documents/cart.html"
+              ><i class="fa fa-solid fa-bag-shopping"></i
+            ></a>
+          </li>
+          <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+        </ul>
+      </div>
+      <div id="mobile">
+        <a href="/Documents/cart.html"
+          ><i class="fa-solid fa-bag-shopping"></i
+        ></a>
+        <i id="bar" class="fas fa-outdent"></i>
+      </div>
+    </section>
+
+    <!-- HERO SECTION -->
+    <section id="hero">
+      <h4>Best Collection</h4>
+      <h2>Super value deals</h2>
+      <h1>On all Products</h1>
+      <p>Save more with coupons & up to 70% off!</p>
+      <button>Shop Now</button>
+    </section>
+
+    <!-- FEATURE SECTION -->
+    <section id="feature" class="section-p1">
+      <div class="fe-box">
+        <img src="./img/features/f1.png" alt="" />
+        <h6>Free Fhipping</h6>
+      </div>
+      <div class="fe-box">
+        <img src="./img/features/f2.png" alt="" />
+        <h6>Online Order</h6>
+      </div>
+      <div class="fe-box">
+        <img src="./img/features/f3.png" alt="" />
+        <h6>Save Money</h6>
+      </div>
+      <div class="fe-box">
+        <img src="./img/features/f4.png" alt="" />
+        <h6>Promotions</h6>
+      </div>
+      <div class="fe-box">
+        <img src="./img/features/f5.png" alt="" />
+        <h6>Happy Sell</h6>
+      </div>
+      <div class="fe-box">
+        <img src="./img/features/f6.png" alt="" />
+        <h6>Support</h6>
+      </div>
+    </section>
+
+    <!-- FEATURE PRODUCTS-->
+    <!-- <section id="product1" class="section-p1">
+      <h2>Featured Products</h2>
+      <p>Summer Collection New Modern Design</p>
+      <div class="pro-container">
+        <div class="pro" data-product-id="1">
+          <img src="./img/products/f1.jpg" alt="" />
+          <div class="des">
+            <span>OVS</span>
+            <h5>Women Long Pleated Skirt</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>$78</h4>
+          </div>
+          <a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="pro" data-product-id="2">
+          <img src="./img/products/f2.jpg" alt="" />
+          <div class="des">
+            <span>OVS</span>
+            <h5>Women Long Pleated Skirt</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>$88</h4>
+          </div>
+          <a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="pro" data-product-id="3">
+          <img src="./img/products/f3.jpg" alt="" />
+          <div class="des">
+            <span>OVS</span>
+            <h5>Black Polka Dot Pleated Skirts</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>$50</h4>
+          </div>
+          <a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="pro" data-product-id="4">
+          <img src="./img/products/f4.jpg" alt="" />
+          <div class="des">
+            <span>OVS</span>
+            <h5>Elastic High Waist Knitted Skirt</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>$66</h4>
+          </div>
+          <a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="pro" data-product-id="5">
+          <img src="./img/products/f5.jpg" alt="" />
+          <div class="des">
+            <span>OVS</span>
+            <h5>Ribbon Satin Blouse</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>$70</h4>
+          </div>
+          <a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="pro" data-product-id="6">
+          <img src="./img/products/f6.jpg" alt="" />
+          <div class="des">
+            <span>OVS</span>
+            <h5>smile loose version T-shirt</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>$100</h4>
+          </div>
+          <a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="pro" data-product-id="7">
+          <img src="./img/products/f7.jpg" alt="" />
+          <div class="des">
+            <span>OVS</span>
+            <h5>Cotton Shirt</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>$55</h4>
+          </div>
+          <a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="pro" data-product-id="8">
+          <img src="./img/products/f8.jpg" alt="" />
+          <div class="des">
+            <span>OVS</span>
+            <h5>Bandage Bow Shirring Blouse</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>$72</h4>
+          </div>
+          <a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- New Arrivals -->
+    <!-- <section id="product2" class="section-p1">
+      <h2>Feature Products</h2>
+      <p>Summer Collection New Modern Design</p>
+      <div class="pro-container">
+        <div class="pro">
+          <img src="/img/products/n3.jpg" alt="" />
+          <div class="des">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>$50</h4>
+          </div>
+          <a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="pro">
+          <img src="/img/products/n4.jpg" alt="" />
+          <div class="des">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>$66</h4>
+          </div>
+          <a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="pro">
+          <img src="/img/products/n5.jpg" alt="" />
+          <div class="des">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>$66</h4>
+          </div>
+          <a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="pro">
+          <img src="/img/products/n6.jpg" alt="" />
+          <div class="des">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>$66</h4>
+          </div>
+          <a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="pro">
+          <img src="/img/products/n7.jpg" alt="" />
+          <div class="des">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>$66</h4>
+          </div>
+          <a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+        <div class="pro">
+          <img src="/img/products/n8.jpg" alt="" />
+          <div class="des">
+            <span>adidas</span>
+            <h5>Cartoon Astronaut T-shirts</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>$66</h4>
+          </div>
+          <a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+      </div>
+    </section> -->
+
+    <!-- Banner -->
+    <section id="banner" class="section-m1">
+      <h4>Repair Services</h4>
+      <h2>Up to <span>70% off</span> - All t-shirta & Accessories</h2>
+      <button class="normal">Explore More</button>
+    </section>
+
+    <!-- sm-banner -->
+    <section id="sm-banner" class="section-p1">
+      <div class="banner-box">
+        <h4>crazy deals</h4>
+        <h2>buy 1 get 1 free</h2>
+        <span>The best classic dress is on sale at Madelein</span>
+        <button class="white">Learn More</button>
+      </div>
+      <div class="banner-box banner-box2">
+        <h4>spring/summer</h4>
+        <h2>Upcomming season</h2>
+        <span>The best classic dress is on sale at Madelein</span>
+        <button class="white">Collection</button>
+      </div>
+    </section>
+    <section id="banner3">
+      <div class="banner-box">
+        <h2>SEASONAL SALE</h2>
+        <h3>Winter Collection -50% OFF</h3>
+      </div>
+      <div class="banner-box banner-box3">
+        <h2>NEW WINTER COLLECTION</h2>
+        <h3>Spring / Winter 2023</h3>
+      </div>
+      <div class="banner-box banner-box4">
+        <h2>JEANS</h2>
+        <h3>New Trendy Model</h3>
+      </div>
+    </section>
+
+    <!-- NEWS LETTER -->
+    <section id="newsletter" class="section-p1 section-m1">
+      <div class="newstext">
+        <h4>Sign Up For Newsletters</h4>
+        <p>
+          Get E-mail updates about our latest shop and
+          <span>special offers</span> .
+        </p>
+      </div>
+      <div class="form">
+        <input type="text" id="emailInput" placeholder="Your email address" />
+        <button class="normal signUp">Sign Up</button>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="section-p1">
+      <div class="col">
+        <!-- <img class="logo" src="img/Main Logo.png" alt="logo" /> -->
+        <h4>Contact</h4>
+        <p>
+          <strong>Address:</strong> 562 Wellington Road, Street 32, San
+          Francisco
+        </p>
+        <p><strong>Phone:</strong> +01 2222 365</p>
+        <p><strong>Hours:</strong> 10:00-18:00 .Mon-Sat</p>
+        <div class="follow">
+          <h4>Follow us</h4>
+          <div class="icon">
+            <i><i class="fab fa-facebook-f"></i></i>
+            <i><i class="fab fa-instagram"></i></i>
+            <i><i class="fab fa-pinterest-p"></i></i>
+            <i><i class="fab fa-youtube"></i></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <h4>About</h4>
+        <a href="#">About us</a>
+        <a href="#">Delivery Informations</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact us</a>
+      </div>
+
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+      </div>
+
+      <div class="col install">
+        <h4>Install App</h4>
+        <p>From App Store or Google Play</p>
+        <div class="row">
+          <img src="./img/pay/app.jpg" alt="" />
+          <img src="./img/pay/play.jpg" alt="" />
+        </div>
+        <p>Secure Payment Gateways</p>
+        <img src="img/pay/pay.png" alt="" />
+      </div>
+
+      <div class="copyright">
+        <p>&copy; <span class="year"></span> Madeleine</p>
+      </div>
+    </footer>
+    <script>
+      //get the email from the news letter
+      document.addEventListener("DOMContentLoaded", function () {
+        const emailInput = document.getElementById("emailInput");
+        const signUpButton = document.querySelector(".signUp");
+
+        signUpButton.addEventListener("click", function () {
+          const email = emailInput.value;
+
+          // Store the email in local storage
+          localStorage.setItem("newsletterEmail", email);
+
+          // Notify the user (this is a simplified example)
+          alert("You have successfully signed up for our newsletter!");
+
+          // Clear the email input
+          emailInput.value = "";
+        });
+      });
+    </script>
+  </body>
+</html>

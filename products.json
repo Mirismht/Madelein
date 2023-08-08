@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "brand": "OVS",
+    "name": "Women Long Pleated Skirt",
+    "price": 78,
+    "image": "/img/products/f1.jpg"
+  },
+  {
+    "id": 2,
+    "brand": "OVS",
+    "name": "Women Long Pleated Skirt",
+    "price": 88,
+    "image": "/img/products/f2.jpg"
+  },
+  {
+    "id": 3,
+    "brand": "OVS",
+    "name": "Black Polka Dot Pleated Skirts",
+    "price": 50,
+    "image": "/img/products/f3.jpg"
+  },
+  {
+    "id": 4,
+    "brand": "OVS",
+    "name": "Elastic High Waist Knitted Skirt",
+    "price": 66,
+    "image": "/img/products/f4.jpg"
+  },
+  {
+    "id": 5,
+    "brand": "OVS",
+    "name": "Ribbon Satin Blouse",
+    "price": 70,
+    "image": "/img/products/f5.jpg"
+  },
+  {
+    "id": 6,
+    "brand": "OVS",
+    "name": "smile loose version T-shirt",
+    "price": 100,
+    "image": "/img/products/f6.jpg"
+  },
+  {
+    "id": 7,
+    "brand": "OVS",
+    "name": "Cotton Shirt",
+    "price": 55,
+    "image": "/img/products/f7.jpg"
+  },
+  {
+    "id": 8,
+    "brand": "OVS",
+    "name": "Bandage Bow Shirring Blouse",
+    "price": 72,
+    "image": "/img/products/f8.jpg"
+  }
+]
