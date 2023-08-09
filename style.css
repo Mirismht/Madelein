@@ -592,21 +592,66 @@ footer .copyright {
 /* PAGINATION */
 
 #pagination {
+  display: flex;
+  justify-content: center;
   text-align: center;
+  color: #088178;
+
+  padding: 10px 40px;
+  border-radius: 6px;
 }
 
-#pagination a {
+#pagination ul {
+  margin: 20px 30px;
+  cursor: pointer;
+  list-style: none;
+}
+
+#pagination ul li {
+  display: inline-block;
+  margin: 0 10px;
+
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 45px;
+  cursor: pointer;
+  background-position: 0 -45px;
+  transition: background-position 0.5s;
+}
+
+#pagination ul li a {
   text-decoration: none;
-  background-color: #088178;
-  color: #fff;
-  padding: 15px 20px;
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 18px;
 }
 
-#pagination a i {
-  font-size: 19px;
+#pagination .btn-pagination1,
+#pagination .btn-pagination2 {
+  display: inline-flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 500;
+  color: #088178;
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+#pagination .btn-pagination1 i,
+#pagination .btn-pagination2 i {
+  width: 24px;
+  margin: 0 15px;
+}
+
+#pagination ul li.active {
+  color: #fff;
+  background-image: linear-gradient(#088178, #088178);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  list-style: none;
 }
 
 /*  */
@@ -1527,6 +1572,10 @@ form button {
 
   .cart-item .item-info h4 {
     font-size: 10px;
+  }
+
+  #checkout-modal {
+    width: inherit;
   }
 }
 

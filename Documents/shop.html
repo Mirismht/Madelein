@@ -159,9 +159,38 @@
 
     <!-- Pagination -->
     <section id="pagination" class="section-p1">
-      <a href="#">1</a>
-      <a href="#">2</a>
-      <a href="#"><i class="fa-solid fa-arrow-right-long"></i></a>
+      <button
+        class="btn-pagination1"
+        onclick="backBtn(); event.preventDefault();"
+      >
+        <i class="fa-solid fa-arrow-left"></i>prev
+      </button>
+      <ul>
+        <li
+          class="link active"
+          value="1"
+          onclick="activeLink(); changePage(1);event.preventDefault();"
+        >
+          1
+        </li>
+        <li
+          class="link"
+          value="2"
+          onclick="activeLink(); changePage(2); event.preventDefault();"
+        >
+          2
+        </li>
+        <li
+          class="link"
+          value="3"
+          onclick=" activeLink(); changePage(3); event.preventDefault(); "
+        >
+          3
+        </li>
+      </ul>
+      <button class="btn-pagination2" onclick=" nextBtn();;">
+        next<i class="fa-solid fa-arrow-right"></i>
+      </button>
     </section>
 
     <!-- NEWS LETTER -->
@@ -234,5 +263,52 @@
         <p>&copy; <span class="year"></span> Madeleine</p>
       </div>
     </footer>
+    <!-- Functionallity to active throught the number of page we click -->
+    <script>
+      let paginationink = document.getElementsByClassName("link");
+      const paginationSection = document.getElementById("pagination");
+      let currentValue = 1;
+
+      function activeLink() {
+        event.preventDefault();
+        for (l of paginationink) {
+          l.classList.remove("active");
+        }
+        event.target.classList.add("active");
+        currentValue = event.target.value;
+      }
+
+      function backBtn() {
+        event.preventDefault();
+        if (currentValue > 1) {
+          for (l of paginationink) {
+            l.classList.remove("active");
+          }
+          currentValue--;
+          paginationink[currentValue - 1].classList.add("active");
+          renderProductsPage(currentValue);
+        }
+      }
+
+      function nextBtn() {
+        event.preventDefault();
+        if (currentValue < 3) {
+          //3 is the number of pages in total
+          for (l of paginationink) {
+            l.classList.remove("active");
+          }
+          currentValue++;
+          paginationink[currentValue - 1].classList.add("active");
+          renderProductsPage(currentValue);
+        }
+      }
+      let currentPage = 1;
+
+      function changePage(pageNumber) {
+        event.preventDefault();
+        currentPage = pageNumber;
+        renderProductsPage(currentPage);
+      }
+    </script>
   </body>
 </html>

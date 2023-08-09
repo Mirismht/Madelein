@@ -33,29 +33,6 @@ const cartItemsEl = document.querySelector(".cart-items");
 const subtotalEl = document.querySelector(".subtotal");
 const checkoutEl = document.querySelector(".checkout");
 
-function renderProducts() {
-  productEl.innerHTML = "";
-  productsItems.forEach((product) => {
-    productEl.innerHTML += `
-      <div class="pro">
-          <img src="${product.image}" alt="" />
-          <div class="des">
-            <span>${product.brand}</span>
-            <h5>${product.name}</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$${product.price}</h4>
-          </div>
-          <a class="cart" onclick="addToCart(${product.id})" href="javascript:void(0)"><i  class="fa-solid fa-cart-shopping"></i></a>
-        </div>
-      `;
-  });
-}
-
 //Cart Array
 let cart = [];
 
@@ -344,7 +321,47 @@ const productsItems = [
   // Add more products here...
 ];
 
-renderProducts();
+function renderProducts(productsData) {
+  productEl.innerHTML = "";
+  productsData.forEach((product) => {
+    productEl.innerHTML += `
+      <div class="pro">
+          <img src="${product.image}" alt="" />
+          <div class="des">
+            <span>${product.brand}</span>
+            <h5>${product.name}</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>$${product.price}</h4>
+          </div>
+          <a class="cart" onclick="addToCart(${product.id})" href="javascript:void(0)"><i  class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+      `;
+  });
+}
+const productsPerPage = 8;
+renderProductsPage(1, productsItems);
+
+const totalPages = Math.ceil(productsItems.length / productsPerPage);
+
+function renderProductsPage(pageNumber) {
+  const startIndex = (pageNumber - 1) * productsPerPage;
+  const endIndex = startIndex + productsPerPage;
+  const productsToDisplay = productsItems.slice(startIndex, endIndex);
+
+  renderProducts(productsToDisplay);
+}
+
+for (let page = 0; page < totalPages; page++) {
+  paginationink[page].addEventListener("click", (event) => {
+    event.preventDefault();
+    renderProductsPage(page + 1, productsItems);
+  });
+}
 
 // Call the function to render cart items when the page loads
 
