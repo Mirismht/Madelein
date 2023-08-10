@@ -1577,6 +1577,24 @@ form button {
   #checkout-modal {
     width: inherit;
   }
+
+  #pagination .btn-pagination1,
+  #pagination .btn-pagination2 {
+    font-size: 15px;
+  }
+
+  #pagination ul li {
+    font-size: 15px;
+    width: 38px;
+    height: 38px;
+    line-height: 40px;
+  }
+  #pagination {
+    padding: 0;
+  }
+  #pagination ul {
+    margin: 0;
+  }
 }
 
 /* for larger screen */
