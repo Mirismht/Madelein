@@ -93,14 +93,23 @@
 
     <!-- FORM -->
     <section id="form-details" class="section-p1">
-      <form id="contactForm" action="">
+      <form
+        action="https://formspree.io/f/mzblegll"
+        method="POST"
+        id="contactForm"
+      >
         <span>LEAVE A MESSAGE</span>
         <h2>We love to hear from you</h2>
-        <input type="text" id="nameInput" placeholder="Your Name" />
-        <input type="text" id="emailInput" placeholder="Email" />
-        <input type="text" id="emailInput" placeholder="Subject" />
+        <input type="text" name="name" id="nameInput" placeholder="Your Name" />
+        <input type="text" name="email" id="emailInput" placeholder="Email" />
+        <input
+          type="text"
+          name="subject"
+          id="emailInput"
+          placeholder="Subject"
+        />
         <textarea
-          name=""
+          name="message"
           id="messageInput"
           cols="30"
           rows="10"
