@@ -343,7 +343,7 @@ function renderProducts(productsData) {
       `;
   });
 }
-const productsPerPage = 8;
+const productsPerPage = 12;
 renderProductsPage(1, productsItems);
 
 const totalPages = Math.ceil(productsItems.length / productsPerPage);
