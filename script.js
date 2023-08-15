@@ -321,9 +321,9 @@ const productsItems = [
   // Add more products here...
 ];
 
-function renderProducts(productsData) {
+function renderProducts() {
   productEl.innerHTML = "";
-  productsData.forEach((product) => {
+  productsItems.forEach((product) => {
     productEl.innerHTML += `
       <div class="pro">
           <img src="${product.image}" alt="" />
@@ -343,25 +343,27 @@ function renderProducts(productsData) {
       `;
   });
 }
-const productsPerPage = 12;
-renderProductsPage(1, productsItems);
 
-const totalPages = Math.ceil(productsItems.length / productsPerPage);
+renderProducts();
+// const productsPerPage = 12;
+// renderProductsPage(1, productsItems);
 
-function renderProductsPage(pageNumber) {
-  const startIndex = (pageNumber - 1) * productsPerPage;
-  const endIndex = startIndex + productsPerPage;
-  const productsToDisplay = productsItems.slice(startIndex, endIndex);
+// const totalPages = Math.ceil(productsItems.length / productsPerPage);
 
-  renderProducts(productsToDisplay);
-}
+// function renderProductsPage(pageNumber) {
+//   const startIndex = (pageNumber - 1) * productsPerPage;
+//   const endIndex = startIndex + productsPerPage;
+//   const productsToDisplay = productsItems.slice(startIndex, endIndex);
 
-for (let page = 0; page < totalPages; page++) {
-  paginationink[page].addEventListener("click", (event) => {
-    event.preventDefault();
-    renderProductsPage(page + 1, productsItems);
-  });
-}
+//   renderProducts(productsToDisplay);
+// }
+
+// for (let page = 0; page < totalPages; page++) {
+//   paginationink[page].addEventListener("click", (event) => {
+//     event.preventDefault();
+//     renderProductsPage(page + 1, productsItems);
+//   });
+// }
 
 // Call the function to render cart items when the page loads
 
