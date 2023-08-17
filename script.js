@@ -57,7 +57,11 @@ function addToCart(id) {
 
   updateCartInLocalStorage();
   updateCart();
+
+  //update the item count display
 }
+
+// Function to update the item count display
 
 //update data cart in locale storage
 function updateCartInLocalStorage() {
@@ -69,6 +73,29 @@ function updateCart() {
   cartItemsEl.innerHTML = "";
   renderCartItems(cart);
   renderSubtotal();
+}
+
+// Update Cart
+function updateCart() {
+  cartItemsEl.innerHTML = "";
+  renderCartItems(cart);
+
+  // Update the item count display
+  const itemCountElement = document.querySelector(".item-count");
+  const totalItems = cart.reduce(
+    (total, item) => total + item.numberOfUnits,
+    0
+  );
+  itemCountElement.textContent = totalItems;
+
+  // Calculate and render the subtotal
+  renderSubtotal();
+}
+
+//remove item from cart
+function removeItemFromCart(id) {
+  cart = cart.filter((item) => item.id !== id);
+  updateCart();
 }
 
 //calculate and render subtotal
@@ -345,29 +372,6 @@ function renderProducts() {
 }
 
 renderProducts();
-// const productsPerPage = 12;
-// renderProductsPage(1, productsItems);
-
-// const totalPages = Math.ceil(productsItems.length / productsPerPage);
-
-// function renderProductsPage(pageNumber) {
-//   const startIndex = (pageNumber - 1) * productsPerPage;
-//   const endIndex = startIndex + productsPerPage;
-//   const productsToDisplay = productsItems.slice(startIndex, endIndex);
-
-//   renderProducts(productsToDisplay);
-// }
-
-// for (let page = 0; page < totalPages; page++) {
-//   paginationink[page].addEventListener("click", (event) => {
-//     event.preventDefault();
-//     renderProductsPage(page + 1, productsItems);
-//   });
-// }
-
-// Call the function to render cart items when the page loads
-
-// Call the function to render cart items when the page loads
 
 ////////////////////////////////////////////////////////////
 

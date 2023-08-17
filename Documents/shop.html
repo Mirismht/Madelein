@@ -41,6 +41,7 @@
         <a href="/Documents/cart.html"
           ><i class="fa-solid fa-bag-shopping"></i
         ></a>
+
         <i id="bar" class="fas fa-outdent"></i>
       </div>
     </section>
@@ -58,140 +59,6 @@
         <!-- Product are rendered automatically -->
       </div>
     </section>
-
-    <!-- NEW ARRIVALS -->
-    <!-- <section id="product2" class="section-p1">
-      <h2>New Arrivals</h2>
-      <p>Summer Collection New Modern Design</p>
-      <div class="pro-container">
-        <div class="pro">
-          <img src="/img/products/n3.jpg" alt="" />
-          <div class="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-shirts</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$50</h4>
-          </div>
-          <a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-        </div>
-        <div class="pro">
-          <img src="/img/products/n4.jpg" alt="" />
-          <div class="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-shirts</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$66</h4>
-          </div>
-          <a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-        </div>
-        <div class="pro">
-          <img src="/img/products/n5.jpg" alt="" />
-          <div class="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-shirts</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$66</h4>
-          </div>
-          <a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-        </div>
-        <div class="pro">
-          <img src="/img/products/n6.jpg" alt="" />
-          <div class="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-shirts</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$66</h4>
-          </div>
-          <a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-        </div>
-        <div class="pro">
-          <img src="/img/products/n7.jpg" alt="" />
-          <div class="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-shirts</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$66</h4>
-          </div>
-          <a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-        </div>
-        <div class="pro">
-          <img src="/img/products/n8.jpg" alt="" />
-          <div class="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-shirts</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$66</h4>
-          </div>
-          <a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- Pagination -->
-    <!-- <section id="pagination" class="section-p1">
-      <button
-        class="btn-pagination1"
-        onclick="backBtn(); event.preventDefault();"
-      >
-        <i class="fa-solid fa-arrow-left"></i>prev
-      </button>
-      <ul>
-        <li
-          class="link active"
-          value="1"
-          onclick="activeLink(); changePage(1);event.preventDefault();"
-        >
-          1
-        </li>
-        <li
-          class="link"
-          value="2"
-          onclick="activeLink(); changePage(2); event.preventDefault();"
-        >
-          2
-        </li>
-        <li
-          class="link"
-          value="3"
-          onclick=" activeLink(); changePage(3); event.preventDefault(); "
-        >
-          3
-        </li>
-      </ul>
-      <button class="btn-pagination2" onclick="nextBtn()">
-        next<i class="fa-solid fa-arrow-right"></i>
-      </button>
-    </section> -->
 
     <!-- NEWS LETTER -->
     <section id="newsletter" class="section-p1 section-m1">
@@ -264,51 +131,5 @@
       </div>
     </footer>
     <!-- Functionallity to active throught the number of page we click -->
-    <!-- <script>
-      let paginationink = document.getElementsByClassName("link");
-      const paginationSection = document.getElementById("pagination");
-      let currentValue = 1;
-
-      function activeLink() {
-        event.preventDefault();
-        for (l of paginationink) {
-          l.classList.remove("active");
-        }
-        event.target.classList.add("active");
-        currentValue = event.target.value;
-      }
-
-      function backBtn() {
-        event.preventDefault();
-        if (currentValue > 1) {
-          for (l of paginationink) {
-            l.classList.remove("active");
-          }
-          currentValue--;
-          paginationink[currentValue - 1].classList.add("active");
-          renderProductsPage(currentValue);
-        }
-      }
-
-      function nextBtn() {
-        event.preventDefault();
-        if (currentValue < 3) {
-          //3 is the number of pages in total
-          for (l of paginationink) {
-            l.classList.remove("active");
-          }
-          currentValue++;
-          paginationink[currentValue - 1].classList.add("active");
-          renderProductsPage(currentValue);
-        }
-      }
-      let currentPage = 1;
-
-      function changePage(pageNumber) {
-        event.preventDefault();
-        currentPage = pageNumber;
-        renderProductsPage(currentPage);
-      }
-    </script> -->
   </body>
 </html>
