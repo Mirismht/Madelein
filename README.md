@@ -1,6 +1,6 @@
 # Madeleine E-Commerce Website
 
-![Madeleine Screenshot](insert_screenshot_or_demo_image_url_here)
+![Madeleine Screenshot](./img/madeleine.png)
 
 ## Project Description
 
