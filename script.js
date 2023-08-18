@@ -26,6 +26,46 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+//CHECKOUT MODAL
+
+document.addEventListener("DOMContentLoaded", function () {
+  const backdrop = document.getElementById("backdrop");
+  const modal = document.querySelector(".modal");
+  const openModalBtn = document.getElementById("open-modal");
+
+  function showBackdrop() {
+    backdrop.classList.toggle("visible");
+  }
+
+  function showModal() {
+    modal.classList.toggle("visible");
+  }
+
+  openModalBtn.addEventListener("click", () => {
+    showBackdrop();
+    showModal();
+  });
+});
+
+///get the email from the news letter
+document.addEventListener("DOMContentLoaded", function () {
+  const emailInput = document.getElementById("emailInput");
+  const signUpButton = document.querySelector(".signUp");
+
+  signUpButton.addEventListener("click", function () {
+    const email = emailInput.value;
+
+    // Store the email in local storage
+    localStorage.setItem("newsletterEmail", email);
+
+    // Notify the user (this is a simplified example)
+    alert("You have successfully signed up for our newsletter!");
+
+    // Clear the email input
+    emailInput.value = "";
+  });
+});
+
 // Cart Functionallity
 
 const productEl = document.querySelector(".pro-container");
@@ -59,6 +99,7 @@ function addToCart(id) {
   updateCart();
 
   //update the item count display
+  updateCartIcon();
 }
 
 // Function to update the item count display
@@ -73,10 +114,11 @@ function updateCart() {
   cartItemsEl.innerHTML = "";
   renderCartItems(cart);
   renderSubtotal();
+  updateCartIcon();
 }
 
 // Update Cart
-function updateCart() {
+function updateCartIcon() {
   cartItemsEl.innerHTML = "";
   renderCartItems(cart);
 
@@ -89,13 +131,14 @@ function updateCart() {
   itemCountElement.textContent = totalItems;
 
   // Calculate and render the subtotal
-  renderSubtotal();
+  // renderSubtotal();
 }
 
 //remove item from cart
 function removeItemFromCart(id) {
   cart = cart.filter((item) => item.id !== id);
   updateCart();
+  updateCartIcon();
 }
 
 //calculate and render subtotal
@@ -365,7 +408,7 @@ function renderProducts() {
             </div>
             <h4>$${product.price}</h4>
           </div>
-          <a class="cart" onclick="addToCart(${product.id})" href="javascript:void(0)"><i  class="fa-solid fa-cart-shopping"></i></a>
+          <a class="cart" onclick="addToCart(${product.id});" href="javascript:void(0)"><i  class="fa-solid fa-cart-shopping"></i></a>
         </div>
       `;
   });
@@ -374,64 +417,3 @@ function renderProducts() {
 renderProducts();
 
 ////////////////////////////////////////////////////////////
-
-//CHOOSE BETWIN PRODUCTS //
-document.addEventListener("DOMContentLoaded", function () {
-  let MainImg = document.getElementById("MainImg");
-  let smallImg = document.getElementsByClassName("small-img");
-
-  //if you click the small image we create a function that set the Main image to be the image that we have clicked
-  smallImg[0].onclick = function () {
-    MainImg.src = smallImg[0].src;
-  };
-
-  smallImg[1].onclick = function () {
-    MainImg.src = smallImg[1].src;
-  };
-  smallImg[2].onclick = function () {
-    MainImg.src = smallImg[2].src;
-  };
-  smallImg[3].onclick = function () {
-    MainImg.src = smallImg[3].src;
-  };
-});
-
-//CHECKOUT MODAL
-
-document.addEventListener("DOMContentLoaded", function () {
-  const backdrop = document.getElementById("backdrop");
-  const modal = document.querySelector(".modal");
-  const openModalBtn = document.getElementById("open-modal");
-
-  function showBackdrop() {
-    backdrop.classList.toggle("visible");
-  }
-
-  function showModal() {
-    modal.classList.toggle("visible");
-  }
-
-  openModalBtn.addEventListener("click", () => {
-    showBackdrop();
-    showModal();
-  });
-});
-
-///get the email from the news letter
-document.addEventListener("DOMContentLoaded", function () {
-  const emailInput = document.getElementById("emailInput");
-  const signUpButton = document.querySelector(".signUp");
-
-  signUpButton.addEventListener("click", function () {
-    const email = emailInput.value;
-
-    // Store the email in local storage
-    localStorage.setItem("newsletterEmail", email);
-
-    // Notify the user (this is a simplified example)
-    alert("You have successfully signed up for our newsletter!");
-
-    // Clear the email input
-    emailInput.value = "";
-  });
-});
